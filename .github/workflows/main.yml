@@ -4,9 +4,7 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
@@ -14,10 +12,14 @@ jobs:
         node-version: 10.x
     - run: npm install
     - run: npm run build
-    - name: Upload files to deployment server
-      uses: ErickGomez98/rsync-deployments@v1.0.1
-      env:
-        DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
-      with:
-        RSYNC_OPTIONS: -azvr --delete --exclude 'node_modules' --exclude '.git*'
-        RSYNC_TARGET: ${{secrets.PRODUCTION_SERVER_DEPLOYMENT_DEST}}
+
+  deployment:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Upload files to production server
+        uses: ErickGomez98/rsync-deployments@v1.0.1
+        env:
+          DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+        with:
+          RSYNC_OPTIONS: -azvr --delete --exclude 'node_modules' --exclude '.git*'
+          RSYNC_TARGET: ${{secrets.PRODUCTION_SERVER_DEPLOYMENT_DEST}}
