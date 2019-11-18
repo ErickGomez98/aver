@@ -15,8 +15,9 @@ jobs:
     #- run: npm install
     #- run: npm run build
     - name: rsync deployments
-      uses: contention/rsync-deployments@v1.0.0
+      uses: ErickGomez98/rsync-deployments@v1.0.1
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
       with:
-        args: "-azvr --delete --exclude 'README.old.md' root@partnersinterno.com:/home/partners/dd/"
+        RSYNC_OPTIONS: -azvr --delete --exclude '*.md' --exclude '.git*'
+        RSYNC_TARGET: root@partnersinterno.com:/home/partners/dd/
