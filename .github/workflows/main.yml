@@ -15,7 +15,7 @@ jobs:
     - run: npm install
     - run: npm run build
     - name: Install php packages
-    - uses: MilesChou/composer-action@master
+      uses: MilesChou/composer-action@master
       with:
         args: install
     - name: Upload files to deployment server
