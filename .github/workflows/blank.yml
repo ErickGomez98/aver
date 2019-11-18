@@ -25,4 +25,4 @@ jobs:
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
       with:
-        args: "-azvr --delete root@partnersinterno.com:/home/partners/dd/"
+        args: "-azvr --exclude node_modules/ --exclude .git/ --exclude .github/ root@partnersinterno.com:/home/partners/dd/"
