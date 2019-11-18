@@ -19,4 +19,4 @@ jobs:
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
       with:
-        args: "-azvr --delete root@partnersinterno.com:/home/partners/dd/"
+        args: "-azvr --delete --exclude 'README.old.md' root@partnersinterno.com:/home/partners/dd/"
