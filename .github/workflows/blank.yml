@@ -19,4 +19,4 @@ jobs:
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
       with:
-        args: "-azvr  --exclude ./README.md --exclude ./.git/ --exclude ./.github/  --exclude ./node_modules/ root@partnersinterno.com:/home/partners/dd/"
+        args: "-azvr  --exclude ./README.old.md --exclude ./.git/ --exclude ./.github/  --exclude ./node_modules/ root@partnersinterno.com:/home/partners/dd/"
