@@ -17,7 +17,8 @@ jobs:
     - name: Install php packages
       uses: nick-zh/composer-php@master
       with:
-        action: 'install'
+        action: 'update'
+        options: '-o'
       #with:
       #  args: install
     #- name: Upload files to deployment server
