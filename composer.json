@@ -1,5 +1,15 @@
 {
   "require": {
-    "dwoo/dwoo": "1.2.*"
+    "dwoo/dwoo": "1.2.*",
+    "swiftmailer/swiftmailer": "^5.4",
+    "mpdf/mpdf": "^6.1",
+    "mashape/unirest-php": "^3.0",
+    "defuse/php-encryption": "^2.2",
+    "phpoffice/phpspreadsheet": "^1.4",
+    "ext-json": "*",
+    "ircmaxell/random-lib": "^1.2",
+    "fzaninotto/faker": "^1.8",
+    "ext-pdo": "*",
+    "ext-mbstring": "*"
   }
 }
