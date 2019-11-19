@@ -15,7 +15,7 @@ jobs:
     #- run: npm install
     #- run: npm run build
     - name: Install php packages
-      uses: ErickGomez98/composer
+      uses: ErickGomez98/composer@master
       with:
         action: 'update'
         options: '-o'
