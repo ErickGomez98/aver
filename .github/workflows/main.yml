@@ -18,7 +18,6 @@ jobs:
       uses: ErickGomez98/composer@master
       with:
         action: 'install'
-        options: '-o'
       #with:
       #  args: install
     #- name: Upload files to deployment server
