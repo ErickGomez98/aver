@@ -17,7 +17,7 @@ jobs:
     - name: Install php packages
       uses: ErickGomez98/composer@master
       with:
-        action: 'update'
+        action: 'install'
         options: '-o'
       #with:
       #  args: install
